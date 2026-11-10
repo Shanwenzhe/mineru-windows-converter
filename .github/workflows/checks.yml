@@ -1,0 +1,33 @@
+name: Windows checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Check PowerShell syntax
+        shell: powershell
+        run: |
+          Get-ChildItem -Filter *.ps1 | ForEach-Object {
+            $parseTokens = $null
+            $parseErrors = $null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$parseTokens, [ref]$parseErrors)
+            if ($parseErrors.Count) {
+              $parseErrors | Format-List
+              throw "PowerShell syntax check failed: $($_.Name)"
+            }
+          }
+      - name: Run output safety tests
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python -m unittest discover -s tests -v

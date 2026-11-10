@@ -1,0 +1,2 @@
+# MinerU 4.1.7 requires Python >=3.11,<3.15.
+mineru==4.1.7

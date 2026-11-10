@@ -1,0 +1,62 @@
+# Local runtimes, models, service state and download caches
+/venv/
+/.venv/
+/python/
+/models/
+/home/
+/uv-cache/
+/work/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and private configuration; keep shareable examples
+.env
+.env.*
+!.env.example
+/config.local.*
+/credentials*.json
+/secrets.*
+.pypirc
+.netrc
+.git-credentials
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Logs and local databases
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Personal inputs and conversion outputs
+/private/
+/personal/
+/inputs/
+/outputs/
+*_mineru/
+*_mineru_p*/
+*-preview-*.png
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Editor and OS state
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
