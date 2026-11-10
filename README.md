@@ -99,6 +99,6 @@ book_mineru/
 
 本仓库仅外部调用 MinerU、Pandoc、Typst，不分发这些工具或模型。第三方工具、依赖及模型分别适用各自授权，见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-包装器源码的许可证尚未选择，目前没有 `LICENSE` 文件；第三方工具的许可证不代表本包装器采用同一许可证。
+本项目维护者有权授权的包装器源码、脚本、模板及文档采用 [MIT License](LICENSE)，版权署名为 `Copyright (c) 2026 Shanwenzhe`。允许使用、修改和分发这些内容，包括商业用途及闭源使用，但须保留版权和许可声明；软件按现状提供，不作保证。MinerU、Pandoc、Typst、模型、字体及其他第三方内容仍适用各自的许可证，MIT 不替代或放宽这些第三方条款。
 
 `.gitignore` 排除了本地运行环境、模型、MinerU 状态目录、缓存、日志、数据库、凭据、个人文档和转换目录。上传前仍应检查待提交文件，避免把自己的 PDF 或识别结果一并提交。
